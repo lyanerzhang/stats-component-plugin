@@ -4,6 +4,7 @@ const webpack = require("webpack")
 const NormalModule = webpack.NormalModule
 const { scanVuePages, outputComUsage } = require("./statistics/statsComponentUsage")
 // const server = require('./server/index')
+const EnhancedStatsPlugin = require('./statistics/enhancedStatsPlugin')
 
 const initStatsMetric = function () {
   return {
@@ -100,3 +101,6 @@ class StatsComponentPlugin {
 }
 
 module.exports = StatsComponentPlugin
+module.exports.EnhancedStatsPlugin = EnhancedStatsPlugin
+
+

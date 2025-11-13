@@ -10,6 +10,9 @@ module.exports = {
   },
   mode: 'production',
   target: 'node',
+  optimization: {
+    minimize: true, // 禁用代码压缩
+  },
   externals: {
     'webpack': 'commonjs webpack', // 插件依赖vue-template-compiler，所以将其设置为外部依赖
   },
